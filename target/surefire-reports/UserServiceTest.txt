@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: UserServiceTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.085 sec <<< FAILURE!
-saveUser(UserServiceTest)  Time elapsed: 0.845 sec  <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.067 sec <<< FAILURE!
+saveUser(UserServiceTest)  Time elapsed: 0.835 sec  <<< FAILURE!
 java.lang.AssertionError: Во время тестирования сохранения пользователя произошло исключение
 java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at org.junit.Assert.fail(Assert.java:89)
@@ -40,7 +40,7 @@ java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-getAllUsers(UserServiceTest)  Time elapsed: 0.021 sec  <<< FAILURE!
+getAllUsers(UserServiceTest)  Time elapsed: 0.044 sec  <<< FAILURE!
 java.lang.AssertionError: Проверьте корректность работы метода сохранения пользователя/удаления или создания таблицы
 	at org.junit.Assert.fail(Assert.java:89)
 	at UserServiceTest.getAllUsers(UserServiceTest.java:79)
