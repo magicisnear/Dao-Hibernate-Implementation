@@ -18,9 +18,9 @@ public class UserDaoJDBCImpl implements UserDao {
     public void createUsersTable() {
         try {
             Statement statement = Util.connection.createStatement();
-            String SQL = "create table USER ( "
+            String SQL = "create table USER ("
                     + "   id INT NOT NULL AUTO_INCREMENT, name VARCHAR(30) NOT NULL, lastname VARCHAR(50) NOT NULL, "
-                    + "   age INT, PRIMARY KEY (id) )";
+                    + "   age INT, PRIMARY KEY (id) ); ";
             statement.executeUpdate(SQL);
         } catch (SQLException e) {
             e.printStackTrace();
