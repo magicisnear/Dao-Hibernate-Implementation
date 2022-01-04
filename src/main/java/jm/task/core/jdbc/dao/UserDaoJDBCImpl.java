@@ -2,9 +2,12 @@ package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
+    private List<User> user = new ArrayList<>();
+
     public UserDaoJDBCImpl() {
 
     }
