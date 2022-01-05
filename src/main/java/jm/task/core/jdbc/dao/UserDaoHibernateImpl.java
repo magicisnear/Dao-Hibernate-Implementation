@@ -37,7 +37,7 @@ public class UserDaoHibernateImpl implements UserDao {
         try (Session session = Util.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
             String sql = "DROP TABLE IF EXISTS User";
-            Query query = session.createSQLQuery(sql).addEntity(User.class);
+            session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
             transaction.commit();
 
         }
