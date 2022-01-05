@@ -14,6 +14,7 @@ public class Main {
         impl.saveUser("Captain", "Morgan", (byte) 25);
         impl.saveUser("Cap", "O4evid", (byte) 36);
 
+
         for (User uno : impl.getAllUsers()) {
             System.out.println(uno);
         }
