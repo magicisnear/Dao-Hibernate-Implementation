@@ -27,8 +27,7 @@ public class UserDaoHibernateImpl implements UserDao {
                     "age TINYINT NOT NULL)";
             Query query = session.createSQLQuery(sql).addEntity(User.class);
             transaction.commit();
-            query.executeUpdate();
-            session.close();
+
         }
     }
 
@@ -43,15 +42,11 @@ public class UserDaoHibernateImpl implements UserDao {
             Transaction transaction = null;
             try (Session session = Util.getSessionFactory().openSession()) {
                 transaction = session.beginTransaction();
-                session.save(name);
-                session.save(lastName);
-                session.save(age);
+                User user = new User(name, lastName, age);
+                session.save(user);
                 transaction.commit();
-            } catch (Exception e) {
-                if (transaction != null) {
-                    transaction.rollback();
-                }
-                e.printStackTrace();
+
+
             }
         }
     }
